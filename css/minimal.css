@@ -1,0 +1,44 @@
+/* === MINIMAL MODE STYLING === */
+[data-mode="minimal"] .hero {
+  min-height: 75vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+[data-mode="minimal"] .hero h1 {
+  font-size: clamp(2.4rem, 7vw, 3.5rem);
+  font-weight: 300;
+}
+
+[data-mode="minimal"] .feature-grid,
+[data-mode="minimal"] .achievements-grid,
+[data-mode="minimal"] .stats-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+[data-mode="minimal"] .feature-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+[data-mode="minimal"] .achievements-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+[data-mode="minimal"] .stats-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+
+[data-mode="minimal"] .editorial {
+  max-width: 720px;
+  margin: 2rem auto 4rem;
+  line-height: 1.7;
+}
+
+[data-mode="minimal"] .task-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 700px) {
+  [data-mode="minimal"] .task-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  [data-mode="minimal"] .task-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}

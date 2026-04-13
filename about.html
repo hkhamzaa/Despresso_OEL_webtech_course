@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" data-mode="minimal">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Despresso — About</title>
+  <script src="js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600&family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/minimal.css">
+  <link rel="stylesheet" href="css/cyber.css">
+</head>
+<body data-page="about">
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Despresso</a>
+      <button id="hamburger" class="hamburger" aria-label="Open menu">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a class="nav-link" data-page="home" href="index.html">Home</a>
+        <a class="nav-link" data-page="tasks" href="tasks.html">Tasks</a>
+        <a class="nav-link" data-page="achievements" href="achievements.html">Achievements</a>
+        <a class="nav-link" data-page="stats" href="stats.html">Stats</a>
+        <a class="nav-link" data-page="about" href="about.html">About</a>
+        <button id="theme-toggle" class="theme-toggle">MINIMAL ● CYBER</button>
+      </div>
+    </div>
+  </nav>
+  <main class="editorial container">
+    <h1 class="terminal-heading">Design Documentation</h1>
+    <h2>Project Overview</h2>
+    <p>Despresso is a multi-page task management website built for CS343 Web Technologies. It combines practical task CRUD workflows with a gamified progression layer so users can plan work, execute consistently, and review personal productivity trends.</p>
+    <h2>The Design Challenge</h2>
+    <p>The lab challenge asks us to reconcile two conflicting visual philosophies in one product: minimalism and immersive interaction. The core requirement is a unified toggle that instantly shifts the whole interface without breaking functionality.</p>
+    <h2>The Solution: A Toggle Architecture</h2>
+    <p>The app switches theme with a single <code>data-mode</code> attribute on the <code>html</code> element. Theme preference is persisted in <code>localStorage</code> as <code>nexus_theme</code>. The shared <code>theme.js</code> runs on every page and applies mode during page initialization so UI transition stays smooth across navigation.</p>
+    <pre><code>function applyTheme(mode) {
+  document.documentElement.setAttribute("data-mode", mode);
+  localStorage.setItem("nexus_theme", mode);
+}</code></pre>
+    <h2>Minimal Mode Design Decisions</h2>
+    <p>DM Sans is used for readability and visual calm. High whitespace, restrained borders, and neutral surfaces help users focus on action and content rather than decoration. The layout is mobile-first to support quick task access on compact screens.</p>
+    <h2>Cyberpunk Mode Design Decisions</h2>
+    <p>Cyber mode uses Orbitron to signal a futuristic identity and JetBrains Mono for telemetry-like labels. Cyan (<code>#00f5d4</code>) represents data flow and hacker-culture UI conventions. Grid overlays and scanlines reference retro CRT interfaces while preserving modern responsiveness.</p>
+    <h2>Gamification System</h2>
+    <p>Tasks award XP by priority, streaks reward daily consistency, and levels follow <code>Math.floor(totalXP / 500) + 1</code>. Achievements mark milestones such as streak depth, completion speed, and total discipline. This layer improves long-term engagement by turning routine completion into progression.</p>
+    <h2>Technical Architecture</h2>
+    <p>The JavaScript architecture is split into focused modules: <code>tasks.js</code> manages CRUD and page rendering, <code>gamification.js</code> handles XP/streak/achievements, <code>theme.js</code> handles mode toggling, and <code>utils.js</code> provides shared data and formatting utilities.</p>
+    <h2>Challenges Faced</h2>
+    <p>One challenge is maintaining modal accessibility and keyboard focus behavior in two highly different themes. Another is avoiding CSS specificity conflicts while still allowing instant global visual switching. A third is designing localStorage structures that are simple, version-friendly, and reliable across all pages.</p>
+  </main>
+  <script src="js/utils.js"></script>
+  <script src="js/gamification.js"></script>
+  <script src="js/tasks.js"></script>
+</body>
+</html>

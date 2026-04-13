@@ -1,0 +1,245 @@
+/* === CYBERPUNK MODE === */
+[data-mode="cyber"] .hero {
+  min-height: 75vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+[data-mode="cyber"] .hero h1 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  text-shadow: 0 0 20px rgba(0, 245, 212, 0.8), 0 0 60px rgba(0, 245, 212, 0.3);
+  letter-spacing: 0.08em;
+}
+
+[data-mode="cyber"] .ticker-wrap {
+  border: 1px solid var(--border);
+  background: rgba(0, 245, 212, 0.05);
+  font-family: var(--font-mono);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+[data-mode="cyber"] .ticker {
+  display: inline-flex;
+  gap: 2rem;
+  padding: 0.55rem 0;
+  color: var(--accent);
+  animation: ticker-scroll 20s linear infinite;
+}
+
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+[data-mode="cyber"] .feature-grid,
+[data-mode="cyber"] .achievements-grid,
+[data-mode="cyber"] .stats-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+[data-mode="cyber"] .feature-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+[data-mode="cyber"] .achievements-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+[data-mode="cyber"] .stats-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+
+[data-mode="cyber"] .card {
+  background: var(--bg-secondary);
+  border-color: var(--border);
+}
+
+[data-mode="cyber"] .task-card {
+  border-left: 3px solid var(--accent);
+}
+
+[data-mode="cyber"] .task-card.priority-critical {
+  border-left-color: var(--danger);
+  animation: border-pulse 1.5s infinite;
+}
+
+[data-mode="cyber"] .task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow);
+}
+
+[data-mode="cyber"] .task-btn--focus:hover {
+  text-shadow: var(--glow-cyan);
+}
+
+[data-mode="cyber"] .cyber-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--glow-cyan);
+}
+
+[data-mode="cyber"] .modal-panel {
+  background: #0d1117;
+  border: 1px solid var(--accent);
+  position: relative;
+}
+
+[data-mode="cyber"] .modal-panel::before,
+[data-mode="cyber"] .modal-panel::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: var(--accent);
+}
+
+[data-mode="cyber"] .modal-panel::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--accent);
+  border-left: 2px solid var(--accent);
+}
+
+[data-mode="cyber"] .modal-panel::after {
+  right: -1px;
+  bottom: -1px;
+  border-bottom: 2px solid var(--accent);
+  border-right: 2px solid var(--accent);
+}
+
+[data-mode="cyber"] .hex-level {
+  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0 50%);
+  background: linear-gradient(135deg, var(--accent), var(--accent-purple));
+  color: #081018;
+  width: 80px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+[data-mode="cyber"] .custom-select__trigger {
+  background: #0d1117;
+  border-color: #1e293b;
+  color: #e2e8f0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+}
+
+[data-mode="cyber"] .custom-select__trigger:hover,
+[data-mode="cyber"] .custom-select.open .custom-select__trigger {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(0, 245, 212, 0.25);
+}
+
+[data-mode="cyber"] .custom-select__options {
+  background: #0d1117;
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 16px rgba(0, 245, 212, 0.1);
+}
+
+[data-mode="cyber"] .custom-select__option {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: #94a3b8;
+  border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+}
+
+[data-mode="cyber"] .custom-select__option:hover {
+  background: rgba(0, 245, 212, 0.07);
+  color: var(--accent);
+}
+
+[data-mode="cyber"] .custom-select__option.selected {
+  color: var(--accent);
+  background: rgba(0, 245, 212, 0.05);
+}
+
+[data-mode="cyber"] .custom-select__arrow {
+  color: var(--accent);
+}
+
+[data-mode="cyber"] #focus-overlay {
+  background: #090b12;
+}
+
+[data-mode="cyber"] #focus-session-label {
+  color: var(--accent);
+  text-shadow: 0 0 8px rgba(0,245,212,0.6);
+}
+
+[data-mode="cyber"] #focus-task-title {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-shadow: 0 0 20px rgba(0,245,212,0.3);
+}
+
+[data-mode="cyber"] #focus-timer-display {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  color: var(--accent);
+  text-shadow: var(--glow-cyan);
+}
+
+[data-mode="cyber"] #focus-ring-progress {
+  stroke: var(--accent);
+  filter: drop-shadow(0 0 6px rgba(0,245,212,0.8));
+}
+
+[data-mode="cyber"] #focus-xp-bonus {
+  color: var(--accent-yellow);
+  text-shadow: 0 0 8px rgba(255,214,10,0.5);
+}
+
+[data-mode="cyber"] #focus-pause-btn,
+[data-mode="cyber"] #focus-end-btn {
+  font-family: "Orbitron", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+[data-mode="cyber"] #roulette-btn {
+  font-family: "Orbitron", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  border-color: var(--accent-secondary);
+  color: var(--accent-secondary);
+  text-transform: uppercase;
+}
+
+[data-mode="cyber"] #roulette-btn:hover {
+  border-color: var(--accent-secondary);
+  box-shadow: var(--glow-pink);
+  color: var(--accent-secondary);
+}
+
+[data-mode="cyber"] #roulette-hint {
+  font-family: "JetBrains Mono", monospace;
+  color: var(--text-muted);
+}
+
+[data-mode="cyber"] #roulette-prefix {
+  color: var(--accent-secondary);
+  text-shadow: var(--glow-pink);
+  font-family: "Orbitron", sans-serif;
+}
+
+[data-mode="cyber"] #roulette-task-name {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-shadow: 0 0 20px rgba(0,245,212,0.4);
+}
+
+[data-mode="cyber"] #roulette-card {
+  background: #0d1117;
+  border-color: var(--accent);
+  box-shadow: 0 0 40px rgba(0,245,212,0.15), inset 0 0 60px rgba(0,0,0,0.3);
+}
+
+[data-mode="cyber"] #roulette-countdown {
+  color: var(--accent-yellow);
+  text-shadow: 0 0 12px rgba(255,214,10,0.6);
+  font-family: "Orbitron", sans-serif;
+  font-size: 22px;
+}

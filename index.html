@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" data-mode="minimal">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Despresso — Home</title>
+  <script src="js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600&family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/minimal.css">
+  <link rel="stylesheet" href="css/cyber.css">
+</head>
+<body data-page="home">
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Despresso</a>
+      <button id="hamburger" class="hamburger" aria-label="Open menu">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a class="nav-link" data-page="home" href="index.html">Home</a>
+        <a class="nav-link" data-page="tasks" href="tasks.html">Tasks</a>
+        <a class="nav-link" data-page="achievements" href="achievements.html">Achievements</a>
+        <a class="nav-link" data-page="stats" href="stats.html">Stats</a>
+        <a class="nav-link" data-page="about" href="about.html">About</a>
+        <button id="theme-toggle" class="theme-toggle">MINIMAL ● CYBER</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero container">
+      <div>
+        <h1 class="glitch-text">Despresso</h1>
+        <p>Brew your focus. Grind through the chaos.</p>
+        <div style="display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap">
+          <a class="btn" href="tasks.html">Open Tasks</a>
+          <a class="btn" href="stats.html">View Stats</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" style="padding:1rem 0 2rem">
+      <h2>Why It Works</h2>
+      <div class="feature-grid">
+        <article class="card" style="padding:1rem"><svg width="28" height="28" viewBox="0 0 24 24"><path d="M7 3h10v4H7zM4 9h16v12H4z" fill="none" stroke="currentColor"/></svg><h3>Smart Task Tracking</h3><p>Fast planning and clean prioritization.</p></article>
+        <article class="card" style="padding:1rem"><svg width="28" height="28" viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 8-6-3-6 3 1-8-5-5 7-1z" fill="none" stroke="currentColor"/></svg><h3>Gamification & XP</h3><p>Progress systems that keep momentum.</p></article>
+        <article class="card" style="padding:1rem"><svg width="28" height="28" viewBox="0 0 24 24"><rect x="3" y="10" width="4" height="10" /><rect x="10" y="6" width="4" height="14"/><rect x="17" y="2" width="4" height="18"/></svg><h3>Visual Stats</h3><p>Understand your rhythm and output.</p></article>
+      </div>
+    </section>
+
+    <section class="container" style="padding-bottom:2.5rem">
+      <h2>How to Use</h2>
+      <ol>
+        <li>Create or import your tasks in the board.</li>
+        <li>Complete missions to earn XP and unlock achievements.</li>
+        <li>Switch modes anytime and review growth in Stats.</li>
+      </ol>
+    </section>
+
+    <section class="ticker-wrap">
+      <div class="ticker">
+        <span>&gt; DESPRESSO v2.0 ONLINE</span><span>&gt; TASKS LOADED</span><span>&gt; XP SYSTEM ACTIVE</span><span>&gt; STREAK MONITOR ENGAGED</span><span>&gt; BREW THE CHAOS</span>
+        <span>&gt; DESPRESSO v2.0 ONLINE</span><span>&gt; TASKS LOADED</span><span>&gt; XP SYSTEM ACTIVE</span><span>&gt; STREAK MONITOR ENGAGED</span><span>&gt; BREW THE CHAOS</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container" style="padding:2rem 0;color:var(--text-secondary)">
+    <p><a href="index.html">Home</a> · <a href="tasks.html">Tasks</a> · <a href="achievements.html">Achievements</a> · <a href="stats.html">Stats</a> · <a href="about.html">About</a></p>
+    <p>© 2026 Despresso</p>
+  </footer>
+
+  <script src="js/utils.js"></script>
+  <script src="js/gamification.js"></script>
+  <script src="js/tasks.js"></script>
+</body>
+</html>

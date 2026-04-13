@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" data-mode="minimal">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Despresso — Achievements</title>
+  <script src="js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600&family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/minimal.css">
+  <link rel="stylesheet" href="css/cyber.css">
+</head>
+<body data-page="achievements">
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Despresso</a>
+      <button id="hamburger" class="hamburger" aria-label="Open menu">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a class="nav-link" data-page="home" href="index.html">Home</a>
+        <a class="nav-link" data-page="tasks" href="tasks.html">Tasks</a>
+        <a class="nav-link" data-page="achievements" href="achievements.html">Achievements</a>
+        <a class="nav-link" data-page="stats" href="stats.html">Stats</a>
+        <a class="nav-link" data-page="about" href="about.html">About</a>
+        <button id="theme-toggle" class="theme-toggle">MINIMAL ● CYBER</button>
+      </div>
+    </div>
+  </nav>
+  <main class="container" style="padding:1.2rem 0 2rem">
+    <h1 class="glitch-text">ACHIEVEMENT MATRIX</h1>
+    <p style="font-family:var(--font-mono);color:var(--text-secondary)">&gt; CLASSIFIED INTEL — 12 OBJECTIVES IDENTIFIED</p>
+    <p id="achievements-summary">ACHIEVEMENTS: 0/12 UNLOCKED | COMPLETION: 0%</p>
+    <div style="height:12px;background:var(--bg-tertiary);margin-bottom:1rem"><div id="achieve-progress" style="height:100%;width:0;background:var(--accent);transition:width .35s ease"></div></div>
+    <section id="achievements-grid" class="achievements-grid"></section>
+  </main>
+  <script src="js/utils.js"></script>
+  <script src="js/gamification.js"></script>
+  <script src="js/tasks.js"></script>
+</body>
+</html>
