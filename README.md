@@ -1,6 +1,6 @@
 # Despresso
 
-**Tagline:** Brew your focus. Grind through the chaos.
+
 
 Despresso is a multi-page vanilla web application for task management, built for **CS343 Web Technologies (OEL)**.  
 It combines two opposite design systems in one product:
